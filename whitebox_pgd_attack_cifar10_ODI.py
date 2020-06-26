@@ -34,6 +34,9 @@ parser.add_argument('--lossFunc', help='loss function for PGD',
 parser.add_argument('--random',
                     default=True,
                     help='random initialization for PGD')
+parser.add_argument('--data-dir',
+                    default='../data',
+                    help='path to data folder')
 parser.add_argument('--model-path',
                     default='./checkpoints/model-latest.pt',
                     help='model for white-box attack evaluation')
@@ -62,7 +65,7 @@ kwargs = {'num_workers': 1, 'pin_memory': True} if use_cuda else {}
 
 # set up data loader
 transform_test = transforms.Compose([transforms.ToTensor(),])
-testset = torchvision.datasets.CIFAR10(root='../data', train=False, download=True, transform=transform_test)
+testset = torchvision.datasets.CIFAR10(root=args.data_dir, train=False, download=True, transform=transform_test)
 test_loader = torch.utils.data.DataLoader(testset, batch_size=args.test_batch_size, shuffle=False, **kwargs)
 
 def margin_loss(logits,y):
