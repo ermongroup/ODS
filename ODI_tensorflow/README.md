@@ -6,7 +6,7 @@ The code is for ODI in tensorflow.
 
 ### Evaluation PGD attack with ODI (on CIFAR-10):
 
-* Download pre-trained model from [MadryLab](https://github.com/MadryLab/cifar10_challenge)
+* Download pre-trained model from [CIFAR10 Adversarial Examples Challenge](https://github.com/MadryLab/cifar10_challenge) repo.
 
 * Evaluate PGD attack with ODI (ODI-PGD):
 ```bash
