@@ -100,7 +100,7 @@ for i in range(args.num_sample):
     if correct:
         X_best = images.clone()
         loss_best = loss_func( logits.data,labels_attacked) * (-1 if args.targeted else 1)
-        nQuery=0
+        nQuery = 1 # query for the original image
         for m in range(args.num_step):
             if args.ODS:
                 X_grad = torch.autograd.Variable(X_best.data, requires_grad=True)
