@@ -1,5 +1,5 @@
 # Output Diversified Sampling (ODS)
-This is the github repository for the paper "[Diversity can be Transferred: Output Diversification for White- and Black-box Attacks](https://arxiv.org/abs/2003.06878)".
+This is the github repository for the NeurIPS 2020 paper "[Diversity can be Transferred: Output Diversification for White- and Black-box Attacks](https://arxiv.org/abs/2003.06878)".
 
 ## Requirement
 
@@ -72,10 +72,10 @@ Our codes for white-box attacks are based on [TRADES official repo](https://gith
 If you use this code for your research, please cite our paper:
 
 ```
-@article{tashiro2020ods,
+@inproceedings{tashiro2020ods,
   title={Diversity can be Transferred: Output Diversification for White- and Black-box Attacks},
   author={Tashiro, Yusuke and Song, Yang and Ermon, Stefano},
-  journal={arXiv preprint arXiv:2003.06878},
+  booktitle={Advances in Neural Information Processing Systems},
   year={2020}
 }
 ```
